@@ -1,0 +1,19 @@
+*** HOLE CARDS ***
+Dealt to Dazed C [5s 9c]
+Dazed C: folds
+Christian Aji: folds
+Dalibor Stankovic: bets $1,800 and is all-in
+Kemal Bel: folds
+Edvin Basaran: folds
+Pegi Mms: calls $1,800
+Chad Lawson: folds
+Chen Attia: folds
+*** FLOP *** [7d 6d 3d]
+*** TURN *** [7d 6d 3d] [8d]
+*** RIVER *** [7d 6d 3d 8d] [Th]
+*** SHOW DOWN ***
+Pegi Mms: shows [Ad Jc] (Flush)
+Pegi Mms collected 3.9K from pot
+*** SUMMARY ***
+Total pot: $3,900 | Rake $0.00
+Board [7d 6d 3d 8d Th]

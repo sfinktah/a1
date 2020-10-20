@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.8" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/.backups"/>
+		<excludeFolder url="file://$MODULE_DIR$/CardGameGUI.vpdm"/>
+		<excludeFolder url="file://$MODULE_DIR$/docs"/>
+		<excludeFolder url="file://$MODULE_DIR$/src_a1"/>
+		<excludeFolder url="file://$MODULE_DIR$/vpproject"/>
+	</contentEntry>
+	<lib name="Validator.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/Validator.jar!/"/>
+	</lib>
+	<levels>
+		<level name="lombok-1.18.12" value="project"/>
+	</levels>
+</component>
