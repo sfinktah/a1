@@ -1,6 +1,12 @@
 package util;
 
+import view.PokerCardPanel;
+
+import java.awt.*;
+import java.util.Objects;
 import java.util.function.Supplier;
+
+import static view.AppViewHelpers.Images.getScaledInstance;
 
 public class Timers {
    /**
@@ -12,24 +18,24 @@ public class Timers {
     * At the end of the wait interval, the function will be called with the arguments that were passed most
     * recently to the debounced function.
     *
-    * <p>Example usage:</p>
-    * <code>
-    * if (debouncedUpdateScaledInstance == null) {
-    * final PokerCardPanel self = this;
-    * Supplier<Void> updateScaledInstance = new Supplier<Void>() {
-    * public Void get() {
-    * if (!lastRenderedCardSize.equals(getSize())) {
-    * lastRenderedCardSize = getSize();
-    * lastBufferedCardImage = getScaledInstance(bufferedCardImage, getWidth(), getHeight(), RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+    * <p>Example usage:
+    * <pre>{@code
+    *
+    *   if (debouncedUpdateScaledInstance == null) {
+    *   final PokerCardPanel self = this;
+    *   Supplier<Void> updateScaledInstance = new Supplier<Void>() {
+    *      public Void get() {
+    *         if (Objects.isNull(lastRenderedCardSize) || !lastRenderedCardSize.equals(getSize())) {
+    *            lastRenderedCardSize = getSize();
+    *            lastBufferedCardImage = getScaledInstance(bufferedCardImage, getWidth(), getHeight(), RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+    *         }
+    *         self.repaint();
+    *         return null;
+    *      }
+    *   };
+    *   debouncedUpdateScaledInstance = debounce(updateScaledInstance, 100);
     * }
-    * self.repaint();
-    * return null;
-    * }
-    * };
-    * debouncedUpdateScaledInstance = debounce(updateScaledInstance, 300);
-    * }
-    * debouncedUpdateScaledInstance.get();
-    * </code>
+    * }</pre>
     *
     * @param function Supplier<T> function to call after delay
     * @param delay    milliseconds
